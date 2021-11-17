@@ -1,9 +1,9 @@
 import dotenv from 'dotenv';
 import { OAuth2Client } from 'google-auth-library';
 import express from 'express';
-import db from './db';
+import db from './models';
 
-db.sync();
+
 dotenv.config();
 console.log(process.env.GOOGLE_CLIENT_ID);
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID)
